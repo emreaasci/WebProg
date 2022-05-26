@@ -3,8 +3,7 @@
     padding: 0;
 }
 
-.container{
-
+body{
     width: 100%;
 	height: 100%;
 	display: flex;
@@ -15,6 +14,10 @@
 	background: linear-gradient(to right,#2660D2,#059275,#FFCA3A,#DE4257,#FE9335);
 	background-size: 700% 700%; 
 	animation: infinite 15s gra ease;
+}
+
+.container{
+    
     /*background: url(cropped-1920-1080-929202.jpg);
     height: 100vh;
     background-size: 700% 700%;*/
@@ -79,7 +82,8 @@
 }
 
 .giris h1{
-    color: wheat;
+    justify-content: center;
+    color: black;
     font-size: 70px;
     font-weight: bold;
     width: 900px;
@@ -87,7 +91,7 @@
 }
 
 .giris h2{
-    color: wheat;
+    color: black;
     font-size: 50px;
     font-weight: bold;
     width: 885px;
@@ -117,18 +121,26 @@
 
 }
 
-.info{
-    border-radius: 20px;
+.content{
+    border-radius: 10px;
     background: rgb(0, 0, 0,0.3);
-    margin-top: 300px;
+    margin-top: 400px;
     position: absolute;
+    text-align: center;
 }
 
-.info p{
+.content p{
     letter-spacing: 1px;
     text-align: center;
     padding-left: 50px;
     margin-top: 20px;
     width: 800px;
+}
+
+.content .social{
+    justify-content: center;
+    padding: 0 10px;
+    font-size: 30px;
+    margin: 10px;
 }
 
