@@ -9,6 +9,9 @@ sayfanın bir taslağı yapıldı
 18/05/2022
 sayfaya kisişel veriler vb alanler eklendi
 
+30/05/2022
+hakkımda kısmı eklendi
+
 
 
 
