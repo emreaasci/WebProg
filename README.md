@@ -12,6 +12,7 @@ sayfaya kisişel veriler vb alanler eklendi
 30/05/2022
 hakkımda kısmı eklendi
 
-
+01/06/2022
+tasarımsal değişikliklere gidildi
 
 
