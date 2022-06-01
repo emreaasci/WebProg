@@ -1,148 +1,276 @@
-*{
+* {
     margin: 0;
     padding: 0;
-}
+    box-sizing: border-box;
+    list-style: none;
+  }
+  
+  body {
+    display: flex;
+    background: -webkit-linear-gradient(left,#1c1f20,#2a2f31,#3f4647,#5b6465,#7e8b8a);
+    background: -o-linear-gradient(left,#1c1f20,#2a2f31,#3f4647,#5b6465,#7e8b8a);
+    background: linear-gradient(to right,#1c1f20,#2a2f31,#3f4647,#5b6465,#7e8b8a);
+    background-size: 700% 700%; 
+    animation: infinite 15s gra ease;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    transition: all 0.4s ease-in-out;
+  }
 
-body{
+  @keyframes gra{
+    0%{
+      background-position: 0% 50%;
+    }
+  
+    50%{
+      background-position: 100% 50%;
+    }
+  
+    100%{
+      background-position: 0% 50%;
+    }
+  }
+  
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+  }
+  
+  header {
+    min-height: 100vh;
+    color: white;
+    padding: 0;
+  }
+  
+  section {
+    min-height: 100vh;
     width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: -webkit-linear-gradient(left,#2660D2,#059275,#FFCA3A,#DE4257,#FE9335);
-	background: -o-linear-gradient(left,#2660D2,#059275,#FFCA3A,#DE4257,#FE9335);
-	background: linear-gradient(to right,#2660D2,#059275,#FFCA3A,#DE4257,#FE9335);
-	background-size: 700% 700%; 
-	animation: infinite 15s gra ease;
-}
-
-.container{
-    
-    /*background: url(cropped-1920-1080-929202.jpg);
-    height: 100vh;
-    background-size: 700% 700%;*/
-}
-
-@keyframes gra{
-	0%{
-		background-position: 0% 50%;
-	}
-
-	50%{
-		background-position: 100% 50%;
-	}
-
-	100%{
-		background-position: 0% 50%;
-	}
-}
-
-.container .navbar{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 3rem 18rem;
+  }
+  
+  .container {
+    justify-content: center;
+    display: none;
+    transition: all 0.4s ease-in-out;
+    background-color: var(--color-primary);
+  }
+  
+  .active {
+    display: block;
+    animation: appear 1s ease-in-out;
+    transform: translateY(0) scaleY(1);
+  }
+  @keyframes appear {
+    0% {
+      transform: translateY(-100%) scaleY(0);
+    }
+    100% {
+      transform: translateY(0) scaleY(1);
+    }
+  }
+  
+  
+  .container .navbar{
+    display: flex;
+    justify-content: center;
     width: 100%;
-    height: 80px;
-}
-.navbar .logo{
+    height: 50px;
+  }
+  .navbar .logo{
     display: inline-block;
     margin-left: 50px;
     margin-top: 20px;
-}
-
-.navbar ul{
+  }
+  
+  .navbar ul{
+    
     float: right;
     margin-right: 20px;
-
-}
-.navbar ul li{
+  
+  }
+  .navbar ul li{
+    
     list-style: none;
     display: inline-block;
     margin:0 8px;
     line-height: 80px;
-}
-
-.navbar ul li a{
-    color: white;
+  }
+  
+  .navbar ul li a{
+    color: black;
     text-decoration: none;
     font-size: 17px;
     padding: 6px 12px;
-}
-
-.navbar ul li a:active,
-.navbar ul li a:hover{
+  }
+  
+  .navbar ul li a:active,
+  .navbar ul li a:hover{
     background: #ff6e00;
     border-radius: 2px; 
-}
-
-.container .giris{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-family: sans-serif;
-    user-select: none; 
-}
-
-.giris h1{
+  }
+  
+  /*Header-content****************************************************************************************
+  ********************************************************************************************************/
+  
+  .info {
+    display: grid;
+    margin-top: 15rem;
+    position: relative;
     justify-content: center;
-    color: black;
-    font-size: 70px;
-    font-weight: bold;
-    width: 900px;
     text-align: center;
-}
-
-.giris h2{
-    color: black;
-    font-size: 50px;
-    font-weight: bold;
-    width: 885px;
-    margin-top: 10px;
-    text-align: center;
-}
-
-.center .buttons{
-    text-align: center;
-}
-
-.buttons button{
-    height: 40px;
-    width: 120px;
-    font-size: 18px;
-    color: #ffb3b3;
-    background: rgb(207, 96, 88);
-    border: solid 1px red;
-    cursor: pointer;
-    outline: none;
-    border-radius: 20px;
-
-}
-
-.buttons button:hover{
-    background:#fff;
-
-}
-
-.content{
-    border-radius: 10px;
-    background: rgb(0, 0, 0,0.3);
-    margin-top: 400px;
-    position: absolute;
-    text-align: center;
-}
-
-.content p{
-    margin: 1.5rem 0;
+    letter-spacing: 3px;
+  }
+  .info .name {
+    font-size: 3rem;
+  }
+  .info p {
     line-height: 2rem;
-    letter-spacing: 1px;
-    text-align: center;
-    padding-left: 50px;
-    margin-top: 20px;
-    width: 800px;
+    padding: 5rem;
+    color: blanchedalmond;
+  }
+
+  /*About***************************************************************************************************
+  ***********************************************************************************************************/
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
+}
+.about-container .right-about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+.about-container .right-about .about-item {
+  border: 1px solid var(--color-grey-5);
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.about-container .right-about .about-item:hover {
+  cursor: default;
+  transform: translateY(-5px);
+  border: 1px solid var(--color-secondary);
+  box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
+}
+.about-container .right-about .about-item .abt-text {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.about-container .right-about .about-item .abt-text .large-text {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+.about-container .right-about .about-item .abt-text .small-text {
+  padding-left: 3rem;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: var(--color-grey-1);
+  letter-spacing: 2px;
+}
+.about-container .right-about .about-item .abt-text .small-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 2rem;
+  height: 2px;
+  background-color: var(--color-grey-5);
+}
+.about-container .left-about {
+  padding-right: 5rem;
+}
+.about-container .left-about p {
+  line-height: 2rem;
+  padding: 1rem;
+  color: var(--color-grey-1);
+}
+.about-container .left-about h4 {
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 
-.content .social{
-    justify-content: center;
-    padding: 0 10px;
-    font-size: 30px;
-    margin: 10px;
+.about-stats {
+  padding-bottom: 4rem;
+}
+.about-stats .progress-bars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+.about-stats .progress-bars .progress-bar {
+  display: flex;
+  flex-direction: column;
+}
+.about-stats .progress-bars .progress-bar .prog-title {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.about-stats .progress-bars .progress-bar .progress-con {
+  display: flex;
+  align-items: center;
+}
+.about-stats .progress-bars .progress-bar .progress-con .prog-text {
+  color: var(--color-grey-2);
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress {
+  width: 100%;
+  height: 0.45rem;
+  background-color: var(--color-grey-4);
+  margin-left: 1rem;
+  position: relative;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--color-secondary);
+  transition: all 0.4s ease-in-out;
+  width: 60%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .html {
+  width: 80%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .css {
+  width: 95%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .js {
+  width: 75%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .react {
+  width: 60%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .node {
+  width: 87%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .python {
+  width: 70%;
 }
 
+.stat-title {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 3.5rem 0;
+  position: relative;
+}
+.stat-title::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 40%;
+  height: 1px;
+  background-color: var(--color-grey-5);
+  transform: translateX(-50%);
+}

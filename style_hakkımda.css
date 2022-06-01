@@ -8,7 +8,8 @@ body{
 }
 
 .container .navbar{
-    
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 80px;
   }
@@ -88,6 +89,8 @@ body{
 }
 
 .left-about p{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
     line-height: 2rem;
     padding: 2rem;
     color: blanchedalmond;
@@ -100,12 +103,18 @@ body{
 }
 
 .about-stats {
-    margin: 5rem;
+    margin: 10rem;
     padding-bottom: 4rem;
+}
+
+.about-stats .stat-title{
+    font-size: 3rem;
+    text-align: center;
 }
 
 
 .about-stats .progress-bars {
+    margin: 5rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
@@ -117,6 +126,8 @@ body{
 }
 
 .about-stats .progress-bars .progress-bar .prog-title {
+    font-size: 2rem;
+    text-align: center;
     font-weight: 500;
   
 }
@@ -127,6 +138,7 @@ body{
 }
 
 .about-stats .progress-bars .progress-bar .progress-con .prog-text {
+    font-size: 1.5rem;
     color: white;
 }
 
