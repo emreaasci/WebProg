@@ -15,4 +15,6 @@ hakkımda kısmı eklendi
 01/06/2022
 tasarımsal değişikliklere gidildi
 
+03/06/2022
+tasarımsal değişiklikler yapıldı
 
