@@ -3,70 +3,71 @@
     padding: 0;
 }
 
-body{
-    background: -webkit-linear-gradient(left,#1c1f20,#2a2f31,#3f4647,#5b6465,#7e8b8a);
-    background: -o-linear-gradient(left,#1c1f20,#2a2f31,#3f4647,#5b6465,#7e8b8a);
-    background: linear-gradient(to right,#1c1f20,#2a2f31,#3f4647,#5b6465,#7e8b8a);
-    background-size: 700% 700%; 
-    animation: infinite 15s gra ease;
+body {
+  background: -webkit-linear-gradient(left,#313263,#643a76,#a7488b,#fd5f9b,#ff8ca2);
+  background: -o-linear-gradient(left,#313263,#643a76,#a7488b,#fd5f9b,#ff8ca2);
+  background: linear-gradient(to right,#313263,#643a76,#a7488b,#fd5f9b,#ff8ca2);
+  background-size: 700% 700%;
+  animation: infinite 30s gra ease;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  transition: all 0.4s ease-in-out;
 }
 
 @keyframes gra{
-    0%{
-      background-position: 0% 50%;
-    }
-  
-    50%{
-      background-position: 100% 50%;
-    }
-  
-    100%{
-      background-position: 0% 50%;
-    }
+  0%{
+    background-position: 0% 50%;
   }
+
+  50%{
+    background-position: 100% 50%;
+  }
+
+  100%{
+    background-position: 0% 50%;
+  }
+}
 
 .container .navbar{
     display: flex;
     justify-content: center;
     width: 100%;
     height: 80px;
-  }
-  .navbar .logo{
-    display: inline-block;
-    margin-left: 50px;
-    margin-top: 20px;
-  }
+}
+.navbar .logo{
+  display: inline-block;
+  margin-left: 50px;
+  margin-top: 20px;
+}
   
-  .navbar ul{
-    align-items: center;
-    float: right;
-    margin-right: 20px;
+.navbar ul{
+  align-items: center;
+  float: right;
+  margin-right: 20px;
+}
+.navbar ul li{
+  align-items: center;
+  list-style: none;
+  display: inline-block;
+  margin:0 8px;
+  line-height: 80px;
+}
   
-  }
-  .navbar ul li{
-    align-items: center;
-    list-style: none;
-    display: inline-block;
-    margin:0 8px;
-    line-height: 80px;
-  }
+.navbar ul li a{
+  color: black;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 6px 12px;
+}
   
-  .navbar ul li a{
-    color: black;
-    text-decoration: none;
-    font-size: 17px;
-    padding: 6px 12px;
-  }
-  
-  .navbar ul li a:active,
-  .navbar ul li a:hover{
-    background: #ff6e00;
-    border-radius: 2px; 
-  }
+.navbar ul li a:active,
+.navbar ul li a:hover{
+  background: #ff6e00;
+  border-radius: 2px; 
+}
 
 .main-title{
     text-align: center;
-    
 }
 
 .main-title h2{
@@ -95,60 +96,15 @@ body{
 /* ***************  ABOUT ********************** */
 
 .about-container {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(2, 1fr);
     padding-top: 3.5rem;
     padding-bottom: 5rem;
     margin: 1.5rem;
   }
-  .about-container .sağ-about {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
-  }
-  .about-container .sağ-about .about-item {
-    border: 1px solid var(--color-grey-5);
-    border-radius: 5px;
-    transition: all 0.4s ease-in-out;
-    box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
-  }
 
-  .about-container .sağ-about .about-item:hover {
-    cursor: default;
-    transform: translateY(-5px);
-    border: 1px solid var(--color-secondary);
-    box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
-  }
-
-  .about-container .sağ-about .about-item .abt-text {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-  }
-  .about-container .sağ-about .about-item .abt-text .large-text {
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--color-secondary);
-  }
-  .about-container .sağ-about .about-item .abt-text .small-text {
-    padding-left: 3rem;
-    position: relative;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    color: var(--color-grey-1);
-    letter-spacing: 2px;
-  }
-  .about-container .sağ-about .about-item .abt-text .small-text::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 15px;
-    width: 2rem;
-    height: 2px;
-    background-color: var(--color-grey-5);
-  }
   .about-container .sol-about {
-    padding-right: 5rem;
+    padding-right: 10rem;
   }
   .about-container .sol-about p {
     font-family: "Poppins", sans-serif;
@@ -164,56 +120,118 @@ body{
     font-size: 2rem;
     text-transform: uppercase;
   }
+
+  .about-container .sağ-about {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin-right: 1rem;
+  }
+  .about-container .sağ-about .about-item img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  .about-container .sağ-about .about-item {
+    border: 1px solid aqua;
+    border-radius: 5px;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .about-container .sağ-about .about-item:hover {
+    cursor: default;
+    transform: translateY(-5px);
+    border: 1px solid orange;
+    box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
+  }
+
+  .about-container .sağ-about .about-item .abt-text {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-container .sağ-about .about-item .abt-text .buyuk-yazi {
+    text-decoration: none;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: aqua;
+  }
+
+  .about-container .sağ-about .about-item .abt-text .small-text {
+    justify-content: center;
+    padding-left: 3rem;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: blue;
+    letter-spacing: 2px;
+  }
+  .about-container .sağ-about .about-item .abt-text .small-text::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 2rem;
+    height: 2px;
+    background-color: var(--color-grey-5);
+  }
   
+  
+  /* STATS ********************************************************************
+  ************************************************************************ */
 
 .about-stats {
     margin: 10rem;
     padding-bottom: 4rem;
 }
 
-.about-stats .stat-title{
+.about-stats .stats-baslik{
     font-size: 3rem;
     text-align: center;
 }
 
 
-.about-stats .progress-bars {
+.about-stats .experience-bars {
     margin: 5rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
 }
 
-.about-stats .progress-bars .progress-bar {
+.about-stats .experience-bars .experience-bar {
     display: flex;
     flex-direction: column;
 }
 
-.about-stats .progress-bars .progress-bar .prog-title {
+.about-stats .experience-bars .experience-bar .prog-title {
     font-size: 2rem;
     text-align: center;
     font-weight: 500;
   
 }
 
-.about-stats .progress-bars .progress-bar .progress-con {
+.about-stats .experience-bars .experience-bar .experience-con {
     display: flex;
     align-items: center; 
 }
 
-.about-stats .progress-bars .progress-bar .progress-con .prog-text {
+.about-stats .experience-bars .experience-bar .experience-con .prog-text {
     font-size: 1.5rem;
     color: white;
 }
 
-.about-stats .progress-bars .progress-bar .progress-con .progress {
+.about-stats .experience-bars .experience-bar .experience-con .experience {
     width: 100%;
     height: 0.45rem;
-    background-color: salmon;
+    background-color: grey;
     margin-left: 1rem;
     position: relative;
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress span {
+.about-stats .experience-bars .experience-bar .experience-con .experience span {
     position: absolute;
     top: 0;
     left: 0;
@@ -222,27 +240,131 @@ body{
     transition: all 0.4s ease-in-out;
     width: 60%;
 }
-
-.about-stats .progress-bars .progress-bar .progress-con .progress .html {
-    width: 80%;
+.about-stats .experience-bars .experience-bar .oran-bar {
+    display: flex;
+    align-items: center; 
 }
 
-.about-stats .progress-bars .progress-bar .progress-con .progress .css {
-    width: 95%;
+.about-stats .experience-bars .experience-bar .oran-bar .text {
+    font-size: 1.5rem;
+    color: white;
 }
 
-.about-stats .progress-bars .progress-bar .progress-con .progress .js {
-    width: 75%;
+.about-stats .experience-bars .experience-bar .oran-bar .oran{
+    width: 100%;
+    height: 0.45rem;
+    background-color: grey;
+    margin-left: 1rem;
+    position: relative;
 }
 
-.about-stats .progress-bars .progress-bar .progress-con .progress .react {
+.about-stats .experience-bars .experience-bar .oran-bar .oran span{
+  position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: black;
+    transition: all 0.4s ease-in-out;
     width: 60%;
 }
 
-.about-stats .progress-bars .progress-bar .progress-con .progress .node {
-    width: 87%;
+.about-stats .experience-bars .experience-bar .oran-bar .oran .java {
+  width: 60%;
 }
 
-.about-stats .progress-bars .progress-bar .progress-con .progress .python {
+.about-stats .experience-bars .experience-bar .experience-con .experience .java {
     width: 70%;
+}
+
+.about-stats .experience-bars .experience-bar .experience-con .experience .kotlin {
+    width: 50%;
+}
+
+.about-stats .experience-bars .experience-bar .experience-con .experience .html {
+    width: 50%;
+}
+
+.about-stats .experience-bars .experience-bar .experience-con .experience .css {
+    width: 55%;
+}
+
+.about-stats .experience-bars .experience-bar .experience-con .experience .c {
+    width: 60%;
+}
+
+.about-stats .experience-bars .experience-bar .experience-con .experience .python {
+    width: 70%;
+}
+
+/* ************************************
+*********************************** */
+.portfolios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 3rem;
+}
+.portfolios .portfolio-item {
+  position: relative;
+  border-radius: 15px;
+}
+.portfolios .portfolio-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.portfolios .portfolio-item .hover-items {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-secondary);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.4s ease-in-out;
+}
+.portfolios .portfolio-item .hover-items h3 {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+}
+.portfolios .portfolio-item .hover-items .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portfolios .portfolio-item .hover-items .icons .icon {
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.portfolios .portfolio-item .hover-items .icons .icon i {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  margin: 0 1rem;
+}
+.portfolios .portfolio-item .hover-items .icons .icon:hover {
+  background-color: var(--color-white);
+}
+.portfolios .portfolio-item .hover-items .icons .icon:hover i {
+  color: var(--color-primary);
+}
+
+.portfolio-item:hover .hover-items {
+  opacity: 1;
+  transform: scale(1);
 }
