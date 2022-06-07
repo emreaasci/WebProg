@@ -66,41 +66,14 @@ body {
   border-radius: 2px; 
 }
 
-.main-title{
-    text-align: center;
-}
-
-.main-title h2{
-    position: relative;
-    text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: 400;
-}
-
-.main-title span{
-    color: white;
-}
-
-.main-title .bg-text{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: rgb(101, 71, 54);
-    transition: all .4s ease-in-out;
-    z-index: -1;
-    transform: translate(-50%,-50%);
-    font-weight: 800;
-    font-size: 6rem;
-}
-
 /* ***************  ABOUT ********************** */
 
 .about-container {
     display: flex;
-    grid-template-columns: repeat(2, 1fr);
     padding-top: 3.5rem;
     padding-bottom: 5rem;
-    margin: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5rem;
   }
 
   .about-container .sol-about {
@@ -113,12 +86,14 @@ body {
     padding: 1rem;
     text-align: center;
     color: blanchedalmond;
+
   }
   .about-container .sol-about h4 {
-    display: flex;
     justify-content: center;
+    display: flex;
     font-size: 2rem;
     text-transform: uppercase;
+
   }
 
   .about-container .sağ-about {
@@ -127,6 +102,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
     margin-right: 1rem;
+    
   }
   .about-container .sağ-about .about-item img {
     width: 100%;
@@ -185,6 +161,7 @@ body {
   ************************************************************************ */
 
 .about-stats {
+    padding-top: 1rem;
     margin: 10rem;
     padding-bottom: 4rem;
 }
@@ -207,7 +184,7 @@ body {
     flex-direction: column;
 }
 
-.about-stats .experience-bars .experience-bar .prog-title {
+.about-stats .experience-bars .experience-bar .title {
     font-size: 2rem;
     text-align: center;
     font-weight: 500;
@@ -271,6 +248,22 @@ body {
 .about-stats .experience-bars .experience-bar .oran-bar .oran .java {
   width: 60%;
 }
+.about-stats .experience-bars .experience-bar .oran-bar .oran .kotlin{
+  width: 66%;
+}
+.about-stats .experience-bars .experience-bar .oran-bar .oran .html{
+  width: 80%;
+}
+.about-stats .experience-bars .experience-bar .oran-bar .oran .css{
+  width: 75%;
+}
+.about-stats .experience-bars .experience-bar .oran-bar .oran .c{
+  width: 30%;
+}
+.about-stats .experience-bars .experience-bar .oran-bar .oran .python{
+  width: 58%;
+}
+
 
 .about-stats .experience-bars .experience-bar .experience-con .experience .java {
     width: 70%;
