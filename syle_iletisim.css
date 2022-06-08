@@ -1,0 +1,131 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body {
+  background: -webkit-linear-gradient(left,#313263,#643a76,#a7488b,#fd5f9b,#ff8ca2);
+  background: -o-linear-gradient(left,#313263,#643a76,#a7488b,#fd5f9b,#ff8ca2);
+  background: linear-gradient(to right,#313263,#643a76,#a7488b,#fd5f9b,#ff8ca2);
+  background-size: 700% 700%;
+  animation: infinite 30s gra ease;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  transition: all 0.4s ease-in-out;
+}
+
+@keyframes gra{
+  0%{
+    background-position: 0% 50%;
+  }
+
+  50%{
+    background-position: 100% 50%;
+  }
+
+  100%{
+    background-position: 0% 50%;
+  }
+}
+
+.container .navbar{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+}
+.navbar .logo{
+  display: inline-block;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+  
+.navbar ul{
+  align-items: center;
+  float: right;
+  margin-right: 20px;
+}
+.navbar ul li{
+  align-items: center;
+  list-style: none;
+  display: inline-block;
+  margin:0 8px;
+  line-height: 80px;
+}
+  
+.navbar ul li a{
+  color: black;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 6px 12px;
+}
+  
+.navbar ul li a:active,
+.navbar ul li a:hover{
+  background: #ff6e00;
+  border-radius: 2px; 
+}
+
+.contact{
+	background-color: var(--secondaryColor);
+	border-bottom:1px solid var(--borderColor);
+	overflow:auto;
+}
+
+.container{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.contact .container .title{
+    justify-content: center;
+    text-align: center;
+    margin: 2rem;
+    font-size: 2rem;
+    display: flex;
+}
+
+.contact .container .form{
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid salmon;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: grey;
+    margin-bottom: 50px;
+
+
+}
+
+.contact .container .form label {
+    line-height: 2.7em;
+
+}
+
+.contact .container .form .input-area{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid cadetblue;
+    font-size: 14px;
+}
+
+
+.contact .container .submit-btn{
+    margin-top: 10px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #ff6e00;
+    background-color: black;
+    border: none;
+
+
+}
