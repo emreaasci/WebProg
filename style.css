@@ -7,9 +7,9 @@
   
   body {
     
-    background: -webkit-linear-gradient(left,#313263,#643a76,#a7488b,#fd5f9b,#ff8ca2);
-    background: -o-linear-gradient(left,#313263,#643a76,#a7488b,#fd5f9b,#ff8ca2);
-    background: linear-gradient(to right,#313263,#643a76,#a7488b,#fd5f9b,#ff8ca2);
+    background: -webkit-linear-gradient(left,#0D0C00,#403226,#594C3B,#403226,#0D0D0D);
+    background: -o-linear-gradient(left,#0D0C00,#403226,#594C3B,#403226,#0D0D0D);
+    background: linear-gradient(to right,#0D0C00,#403226,#594C3B,#403226,#0D0D0D);
     background-size: 700% 700%;
     animation: infinite 30s gra ease;
     font-family: "Poppins", sans-serif;
@@ -57,7 +57,7 @@
 }
   
 .navbar ul li a{
-  color: black;
+  color: white;
   text-decoration: none;
   font-size: 17px;
   padding: 6px 12px;
@@ -65,7 +65,7 @@
   
 .navbar ul li a:active,
 .navbar ul li a:hover{
-  background: #ff6e00;
+  background: #2f6874;
   border-radius: 2px; 
 }
   
@@ -81,11 +81,16 @@
   letter-spacing: 3px;
   }
 .info .name {
-  color: aqua;
+  color: white;
   font-size: 3rem;
+}
+
+.info .hello{
+  color: white;
+  font-size: 2rem;
 }
 .info p {
   line-height: 2rem;
-  padding: 5rem;
+  padding: 3rem;
   color: blanchedalmond;
 }

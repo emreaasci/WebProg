@@ -4,9 +4,9 @@
 }
 
 body {
-  background: -webkit-linear-gradient(left,#313263,#643a76,#a7488b,#fd5f9b,#ff8ca2);
-  background: -o-linear-gradient(left,#313263,#643a76,#a7488b,#fd5f9b,#ff8ca2);
-  background: linear-gradient(to right,#313263,#643a76,#a7488b,#fd5f9b,#ff8ca2);
+  background: -webkit-linear-gradient(left,#0D0C00,#403226,#594C3B,#403226,#0D0D0D);
+  background: -o-linear-gradient(left,#0D0C00,#403226,#594C3B,#403226,#0D0D0D);
+  background: linear-gradient(to right,#0D0C00,#403226,#594C3B,#403226,#0D0D0D);
   background-size: 700% 700%;
   animation: infinite 30s gra ease;
   font-family: "Poppins", sans-serif;
@@ -54,7 +54,7 @@ body {
 }
   
 .navbar ul li a{
-  color: black;
+  color: white;
   text-decoration: none;
   font-size: 17px;
   padding: 6px 12px;
@@ -62,7 +62,7 @@ body {
   
 .navbar ul li a:active,
 .navbar ul li a:hover{
-  background: #ff6e00;
+  background: #2f6874;
   border-radius: 2px; 
 }
 
@@ -89,6 +89,7 @@ body {
 
   }
   .about-container .sol-about h4 {
+    color: white;
     justify-content: center;
     display: flex;
     font-size: 2rem;
@@ -146,15 +147,7 @@ body {
     color: blue;
     letter-spacing: 2px;
   }
-  .about-container .sağ-about .about-item .abt-text .small-text::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 15px;
-    width: 2rem;
-    height: 2px;
-    background-color: var(--color-grey-5);
-  }
+  
   
   
   /* STATS ********************************************************************
@@ -167,6 +160,7 @@ body {
 }
 
 .about-stats .stats-baslik{
+    color: white;
     font-size: 3rem;
     text-align: center;
 }
@@ -185,6 +179,7 @@ body {
 }
 
 .about-stats .experience-bars .experience-bar .title {
+    color: blanchedalmond;
     font-size: 2rem;
     text-align: center;
     font-weight: 500;
@@ -198,22 +193,23 @@ body {
 
 .about-stats .experience-bars .experience-bar .experience-con .prog-text {
     font-size: 1.5rem;
-    color: white;
+    color: blanchedalmond;
 }
 
 .about-stats .experience-bars .experience-bar .experience-con .experience {
     width: 100%;
     height: 0.45rem;
-    background-color: grey;
+    background-color: orange;
     margin-left: 1rem;
     position: relative;
+    animation: animate 3s linear forwards;
 }
 .about-stats .experience-bars .experience-bar .experience-con .experience span {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
-    background-color: black;
+    background-color: red;
     transition: all 0.4s ease-in-out;
     width: 60%;
 }
@@ -230,9 +226,23 @@ body {
 .about-stats .experience-bars .experience-bar .oran-bar .oran{
     width: 100%;
     height: 0.45rem;
-    background-color: grey;
+    background-color: orange;
     margin-left: 1rem;
     position: relative;
+    animation: animate 3s linear forwards;
+}
+
+@keyframes animate {
+  0%{
+    width: 0%;
+    box-shadow: 0 0 30px red;
+  }
+
+  100%{
+    box-shadow: 0 0 30px green;
+    background-color: yellow;
+  }
+  
 }
 
 .about-stats .experience-bars .experience-bar .oran-bar .oran span{
@@ -240,7 +250,7 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    background-color: black;
+    background-color: red;
     transition: all 0.4s ease-in-out;
     width: 60%;
 }
@@ -289,75 +299,3 @@ body {
     width: 70%;
 }
 
-/* ************************************
-*********************************** */
-.portfolios {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
-  margin-top: 3rem;
-}
-.portfolios .portfolio-item {
-  position: relative;
-  border-radius: 15px;
-}
-.portfolios .portfolio-item img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 15px;
-}
-.portfolios .portfolio-item .hover-items {
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-secondary);
-  position: absolute;
-  left: 0;
-  top: 0;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  opacity: 0;
-  transform: scale(0);
-  transition: all 0.4s ease-in-out;
-}
-.portfolios .portfolio-item .hover-items h3 {
-  font-size: 1.5rem;
-  color: var(--color-white);
-  margin-bottom: 1.5rem;
-}
-.portfolios .portfolio-item .hover-items .icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.portfolios .portfolio-item .hover-items .icons .icon {
-  background-color: var(--color-primary);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 1rem;
-  cursor: pointer;
-  transition: all 0.4s ease-in-out;
-}
-.portfolios .portfolio-item .hover-items .icons .icon i {
-  font-size: 1.5rem;
-  color: var(--color-white);
-  margin: 0 1rem;
-}
-.portfolios .portfolio-item .hover-items .icons .icon:hover {
-  background-color: var(--color-white);
-}
-.portfolios .portfolio-item .hover-items .icons .icon:hover i {
-  color: var(--color-primary);
-}
-
-.portfolio-item:hover .hover-items {
-  opacity: 1;
-  transform: scale(1);
-}

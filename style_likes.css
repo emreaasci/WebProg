@@ -4,9 +4,9 @@
 }
 
 body {
-  background: -webkit-linear-gradient(left,#313263,#643a76,#a7488b,#fd5f9b,#ff8ca2);
-  background: -o-linear-gradient(left,#313263,#643a76,#a7488b,#fd5f9b,#ff8ca2);
-  background: linear-gradient(to right,#313263,#643a76,#a7488b,#fd5f9b,#ff8ca2);
+  background: -webkit-linear-gradient(left,#0D0C00,#403226,#594C3B,#403226,#0D0D0D);
+  background: -o-linear-gradient(left,#0D0C00,#403226,#594C3B,#403226,#0D0D0D);
+  background: linear-gradient(to right,#0D0C00,#403226,#594C3B,#403226,#0D0D0D);
   background-size: 700% 700%;
   animation: infinite 30s gra ease;
   font-family: "Poppins", sans-serif;
@@ -54,7 +54,7 @@ body {
 }
   
 .navbar ul li a{
-  color: black;
+  color: white;
   text-decoration: none;
   font-size: 17px;
   padding: 6px 12px;
@@ -62,7 +62,7 @@ body {
   
 .navbar ul li a:active,
 .navbar ul li a:hover{
-  background: #ff6e00;
+  background: #2f6874;
   border-radius: 2px; 
 }
 
@@ -155,7 +155,7 @@ body {
 
   }
   .likes .likes-box .hover-items .linkler .icon:hover {
-    background-color: black;
+    background-color: red;
   }
   .likes .likes-box .hover-items .linkler .icon:hover i {
     color: white;
